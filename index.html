@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <title>AWP-4</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="jsfirst.js"></script>
+</head>
+<body  ng-app="firstappin_ajs">
+    <div ng-controller="Helloworld" class="helloworld">
+        <h1>
+            {{hello.title}}
+        </h1>
+    </div>
+    <script>
+        angular.module("firstappin_ajs",[])
+        .controller("Helloworld",function($scope){
+            $scope.hello={}
+            $scope.hello.title="Helloworld!!!"
+        })
+    </script>
+<div ng-app = "form" class="tableform" >
+<h1>TWO WAY FORM</h1>
+<table class="box1">
+    <div><label>Name:</label><input type = "text" placeholder="Enter Name" ng-model = "name"></div>
+    <div><label>Age:</label><input type = "text" placeholder="Enter Age" ng-model = "age"></div>
+    <div><label>Mobile No:</label><input type="text" placeholder="Enter Mobile number" ng-model = "mobileno"> </div>
+    <div><label>Emails</label></div>
+    <div><label>Official Email:</label><input type="text" placeholder="Enter Official Email " ng-model = "email"></div>  
+    <div> <label>Personal1 Email:</label><input type="text" placeholder="Enter Personal1 Email" ng-model="emailp1"></div>
+    <div><label>Personal2 Email</label><input type="text" placeholder="Enter Personal2 Email" ng-model="emailp2l"></div>    
+</table>
+<hr>
+<table >
+    <div>Name:{{name}}</div> 
+    <div>Age:{{age}}</div> 
+    <div>Mobile No.:{{mobileno}} </div>
+    <div>Emails</div>
+    <div>Official Email:{{email}}</div> 
+    <div>Personal1 Email:{{emailp1}} </div>    
+    <div>Personal2 Email:{{emailp2}}</div> 
+</table>   
+ </div>
+</body>
+</html>
